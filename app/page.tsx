@@ -82,7 +82,7 @@ const ToursSection = () => {
           <div className="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">01</div>
             <div className="relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
-              <Image src="https://picsum.photos/seed/backpacker/600/800" alt="Solo Travelers" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/solo-pexels-arina-krasnikova-7350872.jpg" alt="Solo Travelers" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <h3 className="text-3xl font-heading font-bold uppercase">Solo Travelers</h3>
           </div>
@@ -91,7 +91,7 @@ const ToursSection = () => {
           <div className="min-w-[300px] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div className="text-4xl font-heading font-bold mb-4">02</div>
             <div className="relative h-[250px] w-full rounded-2xl overflow-hidden mb-4">
-              <Image src="https://picsum.photos/seed/tuktuk/600/800" alt="Group Tours" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <Image src="/friend-group-pexels-kindelmedia-7149130.jpg" alt="Group Tours" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold rotate-[-10deg] shadow-sm group-hover:scale-110 group-hover:rotate-[-5deg] transition-all duration-300">LIKE</div>
             </div>
             <div className="flex justify-between items-center mb-4">
@@ -107,7 +107,7 @@ const ToursSection = () => {
           <div className="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">03</div>
             <div className="relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
-              <Image src="https://picsum.photos/seed/family-beach/600/800" alt="Family Escapes" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/family-pexels-vika-glitter-392079-1620653.jpg" alt="Family Escapes" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <h3 className="text-3xl font-heading font-bold uppercase">Family Escapes</h3>
           </div>
