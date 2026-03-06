@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -541,6 +542,7 @@ export default function Home() {
       <ToursSection />
       <DestinationsSection />
       <ServicesSection />
+      <TestimonialsSection />
     </main>
   );
 }
