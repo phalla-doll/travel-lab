@@ -116,15 +116,15 @@ const ToursSection = () => {
           </div>
           
           {/* Card 2 (Active) */}
-          <div className="min-w-[300px] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-lg transition-shadow">
+          <div className="min-w-[300px] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div className="text-4xl font-heading font-bold mb-4">02</div>
             <div className="relative h-[250px] w-full rounded-2xl overflow-hidden mb-4">
-              <Image src="https://picsum.photos/seed/friends/600/800" alt="Friends" fill className="object-cover hover:scale-105 transition-transform duration-700" />
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold rotate-[-10deg] shadow-sm">LIKE</div>
+              <Image src="https://picsum.photos/seed/friends/600/800" alt="Friends" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold rotate-[-10deg] shadow-sm group-hover:scale-110 group-hover:rotate-[-5deg] transition-all duration-300">LIKE</div>
             </div>
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-3xl font-heading font-bold uppercase">Friends</h3>
-              <ArrowUpRight className="w-6 h-6" />
+              <ArrowUpRight className="w-6 h-6 transform group-hover:scale-125 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
             </div>
             <p className="text-xs font-medium leading-relaxed opacity-90">
               Create unforgettable memories with your best friends. Whether it&apos;s a hiking adventure, beach getaway, or cultural escape - our group-friendly tours are designed for fun, bonding, and shared experiences.
