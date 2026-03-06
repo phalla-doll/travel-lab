@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#d4e5f4] min-h-screen flex flex-col p-4 md:p-8">
+    <section className="bg-[#d4e5f4] min-h-screen flex flex-col p-4 md:p-8 pt-32 md:pt-32">
       <Navbar />
       
       <div className="flex-1 flex flex-col mt-4">
