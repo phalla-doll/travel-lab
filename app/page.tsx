@@ -88,7 +88,7 @@ const ToursSection = () => {
           </div>
           
           {/* Card 2 (Active) */}
-          <div className="min-w-[300px] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+          <div className="min-w-[300px] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl transition-all duration-300 group">
             <div className="text-4xl font-heading font-bold mb-4">02</div>
             <div className="relative h-[250px] w-full rounded-2xl overflow-hidden mb-4">
               <Image src="/friend-group-pexels-kindelmedia-7149130.jpg" alt="Group Tours" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
