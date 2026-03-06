@@ -201,6 +201,84 @@ const DestinationsSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Destination Card 3 */}
+          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+            <Image src="https://picsum.photos/seed/phnompenh/600/1000" alt="Royal Palace" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            
+            <div className="absolute inset-0 p-6 flex flex-col text-white">
+              <div className="bg-white/20 backdrop-blur-md rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-white/30">
+                PHNOM PENH, CAMBODIA
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex justify-between items-end mb-3">
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Royal<br/>Palace</h3>
+                  <div className="flex items-center gap-1 bg-white/20 backdrop-blur-md rounded-full px-2 py-1 text-xs border border-white/30">
+                    <span>★</span> 4.8
+                  </div>
+                </div>
+                <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
+                  Discover the stunning architecture of the Royal Palace and Silver Pagoda. Immerse yourself in the bustling capital city, rich in history, culture, and vibrant street life.
+                </p>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
+                  View tour <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Destination Card 4 */}
+          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+            <Image src="https://picsum.photos/seed/kampot/600/1000" alt="Kampot" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
+            
+            <div className="absolute inset-0 p-6 flex flex-col text-black">
+              <div className="bg-white rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-black/10">
+                KAMPOT, CAMBODIA
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex justify-between items-end mb-3">
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Bokor<br/>Mountain</h3>
+                </div>
+                <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
+                  Experience the cool climate and French colonial ruins of Bokor Hill Station. Taste the world-famous Kampot pepper and enjoy a relaxing sunset cruise along the river.
+                </p>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
+                  View tour <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Destination Card 5 */}
+          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+            <Image src="https://picsum.photos/seed/mondulkiri/600/1000" alt="Mondulkiri" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            
+            <div className="absolute inset-0 p-6 flex flex-col text-white">
+              <div className="bg-white/20 backdrop-blur-md rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-white/30">
+                MONDULKIRI, CAMBODIA
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex justify-between items-end mb-3">
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Elephant<br/>Sanctuary</h3>
+                  <div className="flex items-center gap-1 bg-white/20 backdrop-blur-md rounded-full px-2 py-1 text-xs border border-white/30">
+                    <span>★</span> 5.0
+                  </div>
+                </div>
+                <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
+                  Trek through the lush jungles of eastern Cambodia and interact ethically with rescued elephants in their natural habitat. Discover majestic waterfalls and indigenous culture.
+                </p>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
+                  View tour <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
