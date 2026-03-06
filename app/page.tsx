@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { useRef } from "react";
 
 const HeroSection = () => {
   return (
@@ -63,6 +66,16 @@ const HeroSection = () => {
 }
 
 const ToursSection = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { current } = scrollRef;
+      const scrollAmount = direction === 'left' ? -400 : 400;
+      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-[#fbf3d0] min-h-screen flex flex-col p-4 md:p-8">
       
@@ -77,7 +90,7 @@ const ToursSection = () => {
           </div>
         </div>
         
-        <div className="flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
+        <div ref={scrollRef} className="flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
           {/* Card 1 */}
           <div className="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">01</div>
@@ -114,11 +127,11 @@ const ToursSection = () => {
         </div>
         
         <div className="flex items-center gap-4 mt-8">
-          <button className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+          <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
             <ChevronLeft className="w-5 h-5" />
           </button>
           <span className="text-sm font-bold">1 / 3</span>
-          <button className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+          <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -128,6 +141,16 @@ const ToursSection = () => {
 }
 
 const DestinationsSection = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { current } = scrollRef;
+      const scrollAmount = direction === 'left' ? -350 : 350;
+      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-[#fbc7a1] min-h-screen flex flex-col p-4 md:p-8">
       
@@ -150,7 +173,7 @@ const DestinationsSection = () => {
           </div>
         </div>
         
-        <div className="w-full flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
+        <div ref={scrollRef} className="w-full flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
           {/* Destination Card 1 */}
           <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/angkor/600/1000" alt="Angkor Wat" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -354,6 +377,15 @@ const DestinationsSection = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="flex items-center gap-4 mt-4">
+          <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>
