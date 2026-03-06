@@ -10,25 +10,25 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col mt-4">
         {/* Image Card */}
         <div className="relative w-full h-[60vh] md:h-[70vh] rounded-3xl overflow-hidden">
-          <Image src="https://picsum.photos/seed/mountain/1920/1080" alt="Landscape" fill className="object-cover" />
+          <Image src="https://picsum.photos/seed/angkorwat/1920/1080" alt="Angkor Wat" fill className="object-cover" />
           
           {/* Overlay to make text readable */}
           <div className="absolute inset-0 bg-black/20"></div>
           
           <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-12">
             <h1 className="text-[14vw] leading-[0.8] font-heading font-black text-white text-center uppercase w-full mt-8">
-              Discover the world
+              Discover Cambodia
             </h1>
             
             <div className="w-full flex flex-col md:flex-row justify-between items-end gap-8 mb-12 md:mb-0">
               <div className="w-full md:w-[30%] text-xs font-medium leading-relaxed text-white">
-                Travel with confidence with TRAVEL LAB - your trusted guide to breathtaking destinations, thrilling adventures, and unforgettable memories.
+                Travel with confidence with TRAVEL LAB - your trusted guide to breathtaking destinations, thrilling adventures, and unforgettable memories in the Kingdom of Wonder.
                 <br/><br/>
-                From snow-capped mountains to sun-kissed beaches, we help you explore the world like never before.
+                From ancient temples to sun-kissed beaches, we help you explore Cambodia like never before.
               </div>
               
               <div className="w-full md:w-[30%] text-xs font-medium leading-relaxed text-white text-right md:text-left">
-                 Choose your destination, preferred travel style, and dates - we&apos;ll take care of the rest.
+                 Explore ancient temples, pristine beaches, and vibrant culture - we&apos;ll take care of the rest.
                  <br/><br/>
                  Our dedicated team of travel experts and local guides ensures every detail is tailored to your needs, whether you&apos;re planning a solo getaway or a family vacation.
               </div>
@@ -72,8 +72,8 @@ const ToursSection = () => {
             OUR TOURS FOR
           </h2>
           <div className="flex gap-8 text-xl font-heading font-bold uppercase pb-2">
-            <span className="border-b-2 border-black pb-1 cursor-pointer">Mountains</span>
-            <span className="opacity-50 hover:opacity-100 cursor-pointer transition-opacity">Hiking tour</span>
+            <span className="border-b-2 border-black pb-1 cursor-pointer">Temples</span>
+            <span className="opacity-50 hover:opacity-100 cursor-pointer transition-opacity">Jungle Trek</span>
           </div>
         </div>
         
@@ -82,24 +82,24 @@ const ToursSection = () => {
           <div className="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">01</div>
             <div className="relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
-              <Image src="https://picsum.photos/seed/hiker/600/800" alt="Individuals" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="https://picsum.photos/seed/backpacker/600/800" alt="Solo Travelers" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <h3 className="text-3xl font-heading font-bold uppercase">Individuals</h3>
+            <h3 className="text-3xl font-heading font-bold uppercase">Solo Travelers</h3>
           </div>
           
           {/* Card 2 (Active) */}
           <div className="min-w-[300px] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div className="text-4xl font-heading font-bold mb-4">02</div>
             <div className="relative h-[250px] w-full rounded-2xl overflow-hidden mb-4">
-              <Image src="https://picsum.photos/seed/friends/600/800" alt="Friends" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <Image src="https://picsum.photos/seed/tuktuk/600/800" alt="Group Tours" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold rotate-[-10deg] shadow-sm group-hover:scale-110 group-hover:rotate-[-5deg] transition-all duration-300">LIKE</div>
             </div>
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-3xl font-heading font-bold uppercase">Friends</h3>
+              <h3 className="text-3xl font-heading font-bold uppercase">Group Tours</h3>
               <ArrowUpRight className="w-6 h-6 transform group-hover:scale-125 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
             </div>
             <p className="text-xs font-medium leading-relaxed opacity-90">
-              Create unforgettable memories with your best friends. Whether it&apos;s a hiking adventure, beach getaway, or cultural escape - our group-friendly tours are designed for fun, bonding, and shared experiences.
+              Create unforgettable memories with your best friends. Whether it&apos;s exploring ancient ruins, a beach getaway, or a cultural escape - our group-friendly tours are designed for fun, bonding, and shared experiences.
             </p>
           </div>
           
@@ -107,9 +107,9 @@ const ToursSection = () => {
           <div className="min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">03</div>
             <div className="relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
-              <Image src="https://picsum.photos/seed/family/600/800" alt="Families" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="https://picsum.photos/seed/family-beach/600/800" alt="Family Escapes" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <h3 className="text-3xl font-heading font-bold uppercase">Families</h3>
+            <h3 className="text-3xl font-heading font-bold uppercase">Family Escapes</h3>
           </div>
         </div>
         
@@ -138,9 +138,9 @@ const DestinationsSection = () => {
           </h2>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <div>
-              <p className="text-lg font-bold mb-4">Find your perfect adventure today.</p>
+              <p className="text-lg font-bold mb-4">Experience the magic of the Kingdom of Wonder.</p>
               <p className="text-xs font-medium opacity-80 leading-relaxed max-w-md">
-                From breathtaking deserts to lush valleys and vibrant cities - discover the world one destination at a time.
+                From the majestic temples of Siem Reap to the tranquil islands of Koh Rong - discover Cambodia one destination at a time.
               </p>
             </div>
             <button className="bg-[#1a1a1a] text-white rounded-full px-8 py-4 flex items-center justify-center gap-4 w-fit hover:bg-black transition-colors mt-4 md:mt-0 shrink-0">
@@ -153,23 +153,23 @@ const DestinationsSection = () => {
         <div className="w-full flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
           {/* Destination Card 1 */}
           <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
-            <Image src="https://picsum.photos/seed/kyoto/600/1000" alt="Kyoto" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="https://picsum.photos/seed/angkor/600/1000" alt="Angkor Wat" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
             <div className="absolute inset-0 p-6 flex flex-col text-white">
               <div className="bg-white/20 backdrop-blur-md rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-white/30">
-                KYOTO, JAPAN
+                SIEM REAP, CAMBODIA
               </div>
               
               <div className="mt-auto">
                 <div className="flex justify-between items-end mb-3">
-                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Kiyomizudera<br/>Temple</h3>
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Angkor<br/>Wat</h3>
                   <div className="flex items-center gap-1 bg-white/20 backdrop-blur-md rounded-full px-2 py-1 text-xs border border-white/30">
                     <span>★</span> 4.9
                   </div>
                 </div>
                 <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
-                  Step into the serene beauty of the Kyoto Bamboo Forest, where towering bamboo stalks sway gently in the breeze. This iconic location offers a peaceful escape and a unique glimpse into Japan&apos;s natural elegance and cultural heritage.
+                  Witness the breathtaking sunrise over the world&apos;s largest religious monument. Explore the ancient ruins, intricate carvings, and the rich history of the Khmer Empire.
                 </p>
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
                   View tour <ArrowRight className="w-4 h-4" />
@@ -180,20 +180,20 @@ const DestinationsSection = () => {
           
           {/* Destination Card 2 */}
           <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
-            <Image src="https://picsum.photos/seed/glacier/600/1000" alt="Glacier National Park" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <Image src="https://picsum.photos/seed/kohrong/600/1000" alt="Koh Rong Islands" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
             
             <div className="absolute inset-0 p-6 flex flex-col text-black">
               <div className="bg-white rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-black/10">
-                MONTANA, USA
+                KOH RONG, CAMBODIA
               </div>
               
               <div className="mt-auto">
                 <div className="flex justify-between items-end mb-3">
-                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Glacier<br/>National Park</h3>
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Koh Rong<br/>Islands</h3>
                 </div>
                 <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
-                  Located in Montana&apos;s Rocky Mountains, Glacier National Park is a stunning landscape of alpine meadows, deep forests, rugged peaks, and glaciers. Called the &quot;Crown of the Continent,&quot; it offers 700+ miles of trails.
+                  Escape to pristine white-sand beaches and crystal-clear turquoise waters. Koh Rong offers a tropical paradise perfect for relaxation, snorkeling, and vibrant bioluminescent plankton.
                 </p>
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
                   View tour <ArrowRight className="w-4 h-4" />
@@ -217,7 +217,7 @@ const ServicesSection = () => {
             OUR SERVICES
           </h2>
           <p className="text-sm font-medium mb-12 max-w-md opacity-80 leading-relaxed">
-            From the moment you book to the end of your journey, we offer reliable services designed to make your travel smooth, safe, and unforgettable.
+            From the moment you arrive in Phnom Penh or Siem Reap, we offer reliable services designed to make your Cambodian journey smooth, safe, and unforgettable.
           </p>
           <button className="bg-[#1a1a1a] text-white rounded-full px-8 py-4 flex items-center justify-center gap-4 w-fit hover:bg-black transition-colors">
             <span className="text-sm font-medium">View all services</span>
@@ -230,7 +230,7 @@ const ServicesSection = () => {
           <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
             <div className="w-3/4">
               <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 group-hover:text-[#e11d48] transition-colors">AIRPORT<br/>PICKUP</h3>
-              <p className="text-xs font-medium opacity-80 max-w-xs">We provide pickup and transfer from the airport to the hotel</p>
+              <p className="text-xs font-medium opacity-80 max-w-xs">We provide pickup and transfer from the airport to your hotel</p>
             </div>
             <ArrowUpRight className="w-8 h-8 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
           </div>
@@ -238,9 +238,9 @@ const ServicesSection = () => {
           {/* Service 2 */}
           <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
             <div className="w-3/4">
-              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 text-[#e11d48]">CAR & BIKE<br/>RENTAL</h3>
+              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 text-[#e11d48]">TUK-TUK &<br/>SCOOTER</h3>
               <div className="relative w-full h-[200px] rounded-2xl overflow-hidden mt-6">
-                <Image src="https://picsum.photos/seed/car/800/400" alt="Car rental" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="https://picsum.photos/seed/tuktuk-ride/800/400" alt="Tuk-tuk rental" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
             <ArrowUpRight className="w-8 h-8 text-[#e11d48] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
@@ -249,7 +249,7 @@ const ServicesSection = () => {
           {/* Service 3 (partial) */}
           <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
             <div className="w-3/4">
-              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 group-hover:text-[#e11d48] transition-colors">TOUR<br/>GUIDES</h3>
+              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 group-hover:text-[#e11d48] transition-colors">LOCAL<br/>GUIDES</h3>
             </div>
             <ArrowUpRight className="w-8 h-8 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
           </div>
