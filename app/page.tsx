@@ -39,9 +39,9 @@ const HeroSection = () => {
           </div>
           
           {/* Black Button */}
-          <div className="absolute bottom-0 right-0 md:right-[10%] bg-[#1a1a1a] text-white rounded-tl-3xl md:rounded-t-3xl md:rounded-b-none px-8 py-5 flex items-center gap-4 cursor-pointer hover:bg-black transition-colors z-20">
+          <div className="absolute bottom-0 right-0 md:right-[10%] bg-[#1a1a1a] text-white rounded-tl-3xl md:rounded-t-3xl md:rounded-b-none px-8 py-5 flex items-center gap-4 cursor-pointer hover:bg-black hover:scale-105 hover:-translate-y-2 transition-all duration-300 z-20 group">
             <span className="text-sm font-medium">Select a tour</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
           </div>
         </div>
         
