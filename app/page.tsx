@@ -131,22 +131,26 @@ const DestinationsSection = () => {
   return (
     <section className="bg-[#fbc7a1] min-h-screen flex flex-col p-4 md:p-8">
       
-      <div className="flex-1 flex flex-col md:flex-row px-4 md:px-8 pt-12 gap-16">
-        <div className="w-full md:w-1/3 flex flex-col">
-          <h2 className="text-[10vw] md:text-[6vw] leading-[0.85] font-heading font-black uppercase mb-8">
-            POPULAR<br/>DESTINATIONS
+      <div className="flex-1 flex flex-col px-4 md:px-8 pt-12 gap-12">
+        <div className="w-full flex flex-col shrink-0">
+          <h2 className="text-[15vw] sm:text-[12vw] lg:text-[10vw] leading-[0.85] font-heading font-black uppercase mb-8">
+            POPULAR<br/>DESTINATION
           </h2>
-          <p className="text-lg font-bold mb-4">Find your perfect adventure today.</p>
-          <p className="text-xs font-medium mb-12 opacity-80 leading-relaxed">
-            From breathtaking deserts to lush valleys and vibrant cities - discover the world one destination at a time.
-          </p>
-          <button className="bg-[#1a1a1a] text-white rounded-full px-8 py-4 flex items-center justify-center gap-4 w-fit hover:bg-black transition-colors">
-            <span className="text-sm font-medium">View all tours</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+              <p className="text-lg font-bold mb-4">Find your perfect adventure today.</p>
+              <p className="text-xs font-medium opacity-80 leading-relaxed max-w-md">
+                From breathtaking deserts to lush valleys and vibrant cities - discover the world one destination at a time.
+              </p>
+            </div>
+            <button className="bg-[#1a1a1a] text-white rounded-full px-8 py-4 flex items-center justify-center gap-4 w-fit hover:bg-black transition-colors mt-4 md:mt-0 shrink-0">
+              <span className="text-sm font-medium">View all tours</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
         
-        <div className="w-full md:w-2/3 flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
+        <div className="w-full flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
           {/* Destination Card 1 */}
           <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/kyoto/600/1000" alt="Kyoto" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -207,9 +211,9 @@ const ServicesSection = () => {
   return (
     <section className="bg-[#f9d1d9] min-h-screen flex flex-col p-4 md:p-8">
       
-      <div className="flex-1 flex flex-col md:flex-row px-4 md:px-8 pt-12 gap-16">
-        <div className="w-full md:w-1/2 flex flex-col">
-          <h2 className="text-[10vw] md:text-[7vw] leading-[0.85] font-heading font-black uppercase mb-8">
+      <div className="flex-1 flex flex-col lg:flex-row px-4 md:px-8 pt-12 gap-8 lg:gap-16">
+        <div className="w-full lg:w-[45%] xl:w-[40%] flex flex-col shrink-0">
+          <h2 className="text-[12vw] sm:text-[10vw] lg:text-[7vw] xl:text-[8vw] leading-[0.85] font-heading font-black uppercase mb-8">
             OUR SERVICES
           </h2>
           <p className="text-sm font-medium mb-12 max-w-md opacity-80 leading-relaxed">
@@ -221,7 +225,7 @@ const ServicesSection = () => {
           </button>
         </div>
         
-        <div className="w-full md:w-1/2 flex flex-col">
+        <div className="w-full lg:w-[55%] xl:w-[60%] flex flex-col">
           {/* Service 1 */}
           <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
             <div className="w-3/4">
