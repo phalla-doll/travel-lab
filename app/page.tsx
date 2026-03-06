@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="flex-1 flex flex-col mt-4">
         {/* Image Card */}
         <div className="relative w-full h-[60vh] md:h-[70vh] rounded-3xl overflow-hidden">
-          <Image src="https://picsum.photos/seed/angkorwat/1920/1080" alt="Angkor Wat" fill className="object-cover" />
+          <Image src="/angkor-main-pexels-lkloeppel-2416576.jpg" alt="Angkor Wat" fill className="object-cover" />
           
           {/* Overlay to make text readable */}
           <div className="absolute inset-0 bg-black/20"></div>
