@@ -279,6 +279,81 @@ const DestinationsSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Destination Card 6 */}
+          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+            <Image src="https://picsum.photos/seed/battambang/600/1000" alt="Battambang" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
+            
+            <div className="absolute inset-0 p-6 flex flex-col text-black">
+              <div className="bg-white rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-black/10">
+                BATTAMBANG, CAMBODIA
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex justify-between items-end mb-3">
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Bamboo<br/>Train</h3>
+                </div>
+                <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
+                  Ride the famous Bamboo Train through lush rice paddies, explore well-preserved French colonial architecture, and witness the spectacular bat caves at sunset.
+                </p>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
+                  View tour <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Destination Card 7 */}
+          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+            <Image src="https://picsum.photos/seed/kep/600/1000" alt="Kep" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            
+            <div className="absolute inset-0 p-6 flex flex-col text-white">
+              <div className="bg-white/20 backdrop-blur-md rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-white/30">
+                KEP, CAMBODIA
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex justify-between items-end mb-3">
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Crab<br/>Market</h3>
+                  <div className="flex items-center gap-1 bg-white/20 backdrop-blur-md rounded-full px-2 py-1 text-xs border border-white/30">
+                    <span>★</span> 4.7
+                  </div>
+                </div>
+                <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
+                  Savor the world-renowned Kep crab with fresh Kampot pepper right by the sea. Hike through Kep National Park and relax on quiet, tranquil beaches.
+                </p>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
+                  View tour <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Destination Card 8 */}
+          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+            <Image src="https://picsum.photos/seed/preahvihear/600/1000" alt="Preah Vihear" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
+            
+            <div className="absolute inset-0 p-6 flex flex-col text-black">
+              <div className="bg-white rounded-full px-3 py-1 text-[10px] font-bold w-fit mb-auto border border-black/10">
+                PREAH VIHEAR, CAMBODIA
+              </div>
+              
+              <div className="mt-auto">
+                <div className="flex justify-between items-end mb-3">
+                  <h3 className="text-3xl font-heading font-bold uppercase leading-none">Cliff-top<br/>Temple</h3>
+                </div>
+                <p className="text-[11px] font-medium mb-5 line-clamp-3 opacity-90 leading-relaxed">
+                  Discover this spectacular ancient Hindu temple perched on the edge of a cliff in the Dângrêk Mountains, offering breathtaking panoramic views of the Cambodian plains.
+                </p>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-4 transition-all">
+                  View tour <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
