@@ -98,7 +98,7 @@ const ToursSection = () => {
           </div>
         </div>
         
-        <div ref={scrollRef} className="flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
+        <div ref={scrollRef} className="flex gap-8 overflow-x-auto py-16 px-4 md:px-8 -mx-4 md:-mx-8 snap-x scrollbar-hide">
           {/* Card 1 */}
           <div className="parallax-card min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">01</div>
@@ -181,7 +181,7 @@ const DestinationsSection = () => {
           </div>
         </div>
         
-        <div ref={scrollRef} className="w-full flex gap-8 overflow-x-auto pb-8 snap-x scrollbar-hide">
+        <div ref={scrollRef} className="w-full flex gap-8 overflow-x-auto py-16 px-4 md:px-8 -mx-4 md:-mx-8 snap-x scrollbar-hide">
           {/* Destination Card 1 */}
           <div className="parallax-card card-image-container min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/angkor/600/1000" alt="Angkor Wat" fill className="object-cover scale-110 transition-transform duration-700 group-hover:scale-125" />
@@ -432,7 +432,7 @@ const ServicesSection = () => {
           <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
             <div className="w-3/4">
               <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 text-[#e11d48]">TUK-TUK &<br/>SCOOTER</h3>
-              <div className="card-image-container relative w-full h-[200px] rounded-2xl overflow-hidden mt-6">
+              <div className="card-image-container parallax-card relative w-full h-[200px] rounded-2xl overflow-hidden mt-6">
                 <Image src="https://picsum.photos/seed/tuktuk-ride/800/400" alt="Tuk-tuk rental" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
               </div>
             </div>
@@ -498,7 +498,7 @@ export default function Home() {
       );
     });
 
-    // Subtle parallax for cards
+    // Subtle parallax for cards (Entrance)
     gsap.utils.toArray<HTMLElement>(".parallax-card").forEach((card, i) => {
       gsap.fromTo(card,
         { y: 50, opacity: 0 },
@@ -515,23 +515,18 @@ export default function Home() {
           }
         }
       );
-    });
-    
-    // Image parallax inside cards
-    gsap.utils.toArray<HTMLElement>(".card-image-container").forEach((container) => {
-      const img = container.querySelector("img");
-      if (img) {
-        gsap.to(img, {
-          yPercent: 15,
-          ease: "none",
-          scrollTrigger: {
-            trigger: container,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-          }
-        });
-      }
+      
+      // Continuous parallax for the whole card
+      gsap.to(card, {
+        yPercent: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: card,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        }
+      });
     });
 
   }, { scope: containerRef });
