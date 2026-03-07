@@ -23,7 +23,7 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="w-full lg:w-1/2 flex flex-wrap gap-12 lg:justify-end">
+        <div className="w-full lg:w-1/2 flex flex-wrap gap-8 md:gap-12 lg:justify-end">
           <div className="flex flex-col gap-4">
             <h4 className="text-xs font-bold uppercase tracking-widest opacity-50 mb-2">Company</h4>
             <a href="#" className="text-sm font-medium hover:text-[#fbc7a1] transition-colors">About Us</a>
@@ -56,7 +56,7 @@ export const Footer = () => {
       </div>
       
       <div className="flex flex-col items-center justify-center mt-auto pt-12 border-t border-white/10 overflow-hidden">
-        <h1 className="text-[18vw] leading-[0.75] font-heading font-black uppercase text-center w-full tracking-tighter">
+        <h1 className="text-[15vw] md:text-[18vw] leading-[0.75] font-heading font-black uppercase text-center w-full tracking-tighter">
           TRAVEL LAB
         </h1>
         <div className="w-full flex flex-col md:flex-row justify-between items-center mt-8 px-4 md:px-8 gap-4">

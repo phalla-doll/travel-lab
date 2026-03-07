@@ -48,7 +48,7 @@ export const FAQSection = () => {
               <div key={index} className="border-b border-black/20">
                 <button 
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full py-8 flex justify-between items-center text-left group"
+                  className="w-full py-6 md:py-8 flex justify-between items-center text-left group"
                 >
                   <h3 className={`text-2xl md:text-3xl font-heading font-bold uppercase pr-8 transition-colors ${openIndex === index ? 'text-[#2563eb]' : 'group-hover:text-[#2563eb]'}`}>
                     {faq.question}

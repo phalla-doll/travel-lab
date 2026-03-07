@@ -40,7 +40,7 @@ const HeroSection = () => {
                 From ancient temples to sun-kissed beaches, we help you explore Cambodia like never before.
               </div>
               
-              <div className="w-full md:w-[30%] text-xs font-medium leading-relaxed text-white text-right md:text-left">
+              <div className="w-full md:w-[30%] text-xs font-medium leading-relaxed text-white">
                  Explore ancient temples, pristine beaches, and vibrant culture - we&apos;ll take care of the rest.
                  <br/><br/>
                  Our dedicated team of travel experts and local guides ensures every detail is tailored to your needs, whether you&apos;re planning a solo getaway or a family vacation.
@@ -59,15 +59,15 @@ const HeroSection = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-8">
           <div>
             <h3 className="text-3xl font-heading font-bold uppercase mb-2">1 OR MORE</h3>
-            <p className="text-xs font-medium opacity-80">Travel with your family or alone,<br/>we will provide complete comfort</p>
+            <p className="text-xs font-medium opacity-80">Travel with your family or alone,<br className="hidden md:block" />we will provide complete comfort</p>
           </div>
           <div className="md:border-l border-black/20 md:pl-8">
             <h3 className="text-3xl font-heading font-bold uppercase mb-2">70+ TOURS</h3>
-            <p className="text-xs font-medium opacity-80">Destinations: lush tropical gardens,<br/>pristine beaches and more</p>
+            <p className="text-xs font-medium opacity-80">Destinations: lush tropical gardens,<br className="hidden md:block" />pristine beaches and more</p>
           </div>
           <div className="md:border-l border-black/20 md:pl-8">
             <h3 className="text-3xl font-heading font-bold uppercase mb-2">PRO TEAM</h3>
-            <p className="text-xs font-medium opacity-80">A personalized guide is a unique<br/>chance to create the trip of your dreams</p>
+            <p className="text-xs font-medium opacity-80">A personalized guide is a unique<br className="hidden md:block" />chance to create the trip of your dreams</p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ const ToursSection = () => {
     <section className="bg-[#fbf3d0] min-h-screen flex flex-col p-4 md:p-8">
       
       <div className="flex-1 flex flex-col px-4 md:px-8 pt-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <h2 className="section-title text-[10vw] md:text-[8vw] leading-[0.8] font-heading font-black uppercase">
             OUR TOURS FOR
           </h2>
@@ -102,7 +102,7 @@ const ToursSection = () => {
         
         <div ref={scrollRef} className="flex gap-8 overflow-x-auto py-16 px-4 md:px-8 -mx-4 md:-mx-8 snap-x scrollbar-hide">
           {/* Card 1 */}
-          <div className="parallax-card min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
+          <div className="parallax-card min-w-[85vw] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">01</div>
             <div className="card-image-container relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
               <Image src="/solo-pexels-arina-krasnikova-7350872.jpg" alt="Solo Travelers" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
@@ -111,7 +111,7 @@ const ToursSection = () => {
           </div>
           
           {/* Card 2 (Active) */}
-          <div className="parallax-card min-w-[300px] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl transition-all duration-300 group">
+          <div className="parallax-card min-w-[85vw] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl transition-all duration-300 group">
             <div className="text-4xl font-heading font-bold mb-4">02</div>
             <div className="card-image-container relative h-[250px] w-full rounded-2xl overflow-hidden mb-4">
               <Image src="/friend-group-pexels-kindelmedia-7149130.jpg" alt="Group Tours" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
@@ -127,7 +127,7 @@ const ToursSection = () => {
           </div>
           
           {/* Card 3 */}
-          <div className="parallax-card min-w-[300px] md:min-w-[400px] snap-start group cursor-pointer">
+          <div className="parallax-card min-w-[85vw] md:min-w-[400px] snap-start group cursor-pointer">
             <div className="text-4xl font-heading font-bold mb-4">03</div>
             <div className="card-image-container relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
               <Image src="/family-pexels-vika-glitter-392079-1620653.jpg" alt="Family Escapes" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
@@ -185,7 +185,7 @@ const DestinationsSection = () => {
         
         <div ref={scrollRef} className="parallax-row w-full flex gap-8 overflow-x-auto py-16 px-4 md:px-8 -mx-4 md:-mx-8 snap-x scrollbar-hide">
           {/* Destination Card 1 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/angkor/600/1000" alt="Angkor Wat" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
@@ -212,7 +212,7 @@ const DestinationsSection = () => {
           </div>
           
           {/* Destination Card 2 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/kohrong/600/1000" alt="Koh Rong Islands" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
             
@@ -236,7 +236,7 @@ const DestinationsSection = () => {
           </div>
 
           {/* Destination Card 3 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/phnompenh/600/1000" alt="Royal Palace" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
@@ -263,7 +263,7 @@ const DestinationsSection = () => {
           </div>
 
           {/* Destination Card 4 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/kampot/600/1000" alt="Kampot" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
             
@@ -287,7 +287,7 @@ const DestinationsSection = () => {
           </div>
 
           {/* Destination Card 5 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/mondulkiri/600/1000" alt="Mondulkiri" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
@@ -314,7 +314,7 @@ const DestinationsSection = () => {
           </div>
 
           {/* Destination Card 6 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/battambang/600/1000" alt="Battambang" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
             
@@ -338,7 +338,7 @@ const DestinationsSection = () => {
           </div>
 
           {/* Destination Card 7 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/kep/600/1000" alt="Kep" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
@@ -365,7 +365,7 @@ const DestinationsSection = () => {
           </div>
 
           {/* Destination Card 8 */}
-          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+          <div className="min-w-[85vw] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
             <Image src="https://picsum.photos/seed/preahvihear/600/1000" alt="Preah Vihear" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent"></div>
             

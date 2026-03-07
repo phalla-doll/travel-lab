@@ -100,7 +100,7 @@ export const TestimonialsSection = () => {
           {/* Right side: Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col">
             <div className="relative">
-              <span className="text-[120px] leading-none font-heading font-black text-black/10 absolute -top-16 -left-8">&quot;</span>
+              <span className="text-[100px] md:text-[120px] leading-none font-heading font-black text-black/10 absolute -top-12 md:-top-16 -left-2 md:-left-8">&quot;</span>
               <p ref={textRef} className="text-2xl md:text-4xl font-heading font-medium leading-relaxed relative z-10 min-h-[200px] md:min-h-[250px] flex items-center">
                 {testimonials[currentIndex].text}
               </p>
@@ -112,18 +112,18 @@ export const TestimonialsSection = () => {
                 <p className="text-xs font-medium opacity-60 uppercase tracking-widest mt-1">{testimonials[currentIndex].location}</p>
               </div>
               
-              <div className="flex gap-4">
+              <div className="flex gap-2 md:gap-4 shrink-0">
                 <button 
                   onClick={prev}
-                  className="w-14 h-14 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
                 >
-                  <ArrowLeft className="w-6 h-6" />
+                  <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
                 <button 
                   onClick={next}
-                  className="w-14 h-14 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
                 >
-                  <ArrowRight className="w-6 h-6" />
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
               </div>
             </div>
