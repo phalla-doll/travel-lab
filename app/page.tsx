@@ -181,10 +181,10 @@ const DestinationsSection = () => {
           </div>
         </div>
         
-        <div ref={scrollRef} className="w-full flex gap-8 overflow-x-auto py-16 px-4 md:px-8 -mx-4 md:-mx-8 snap-x scrollbar-hide">
+        <div ref={scrollRef} className="parallax-row w-full flex gap-8 overflow-x-auto py-16 px-4 md:px-8 -mx-4 md:-mx-8 snap-x scrollbar-hide">
           {/* Destination Card 1 */}
-          <div className="parallax-card card-image-container min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
-            <Image src="https://picsum.photos/seed/angkor/600/1000" alt="Angkor Wat" fill className="object-cover scale-110 transition-transform duration-700 group-hover:scale-125" />
+          <div className="min-w-[300px] md:min-w-[350px] h-[500px] relative rounded-3xl overflow-hidden snap-start group cursor-pointer">
+            <Image src="https://picsum.photos/seed/angkor/600/1000" alt="Angkor Wat" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
             
             <div className="absolute inset-0 p-6 flex flex-col text-white">
@@ -391,6 +391,7 @@ const DestinationsSection = () => {
           <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
             <ChevronLeft className="w-5 h-5" />
           </button>
+          <span className="text-sm font-bold">1 / 8</span>
           <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -522,6 +523,20 @@ export default function Home() {
         ease: "none",
         scrollTrigger: {
           trigger: card,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        }
+      });
+    });
+
+    // Parallax for whole row
+    gsap.utils.toArray<HTMLElement>(".parallax-row").forEach((row) => {
+      gsap.to(row, {
+        yPercent: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: row,
           start: "top bottom",
           end: "bottom top",
           scrub: true,
