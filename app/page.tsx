@@ -35,7 +35,7 @@ const HeroSection = () => {
               Discover Cambodia
             </h1>
             
-            <div className="w-full md:w-[75%] lg:w-[65%] flex flex-col md:flex-row justify-between items-end gap-8 mb-20 md:mb-4">
+            <div className="w-full md:w-[75%] lg:w-[65%] flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20 md:mb-4">
               <div className="w-full md:w-[45%] text-xs font-medium leading-relaxed text-white">
                 Travel with confidence with TRAVEL LAB - your trusted guide to breathtaking destinations, thrilling adventures, and unforgettable memories in the Kingdom of Wonder.
                 <br/><br/>
@@ -97,7 +97,7 @@ const ToursSection = () => {
       
       <div className="flex-1 flex flex-col px-4 md:px-8 pt-12">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-          <h2 className="section-title text-[10vw] md:text-[8vw] leading-[0.8] font-heading font-black uppercase">
+          <h2 className="section-title text-[12vw] sm:text-[10vw] md:text-[8vw] leading-[0.8] font-heading font-black uppercase">
             OUR TOURS FOR
           </h2>
           <div className="flex gap-8 text-xl font-heading font-bold uppercase pb-2">

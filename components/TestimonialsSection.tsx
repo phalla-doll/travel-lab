@@ -100,7 +100,7 @@ export const TestimonialsSection = () => {
           {/* Right side: Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col">
             <div className="relative">
-              <span className="text-[100px] md:text-[120px] leading-none font-heading font-black text-black/10 absolute -top-12 md:-top-16 -left-2 md:-left-8">&quot;</span>
+              <span className="text-[100px] md:text-[120px] leading-none font-heading font-black text-black/10 absolute -top-12 md:-top-16 left-0 md:-left-8">&quot;</span>
               <p ref={textRef} className="text-2xl md:text-4xl font-heading font-medium leading-relaxed relative z-10 min-h-[200px] md:min-h-[250px] flex items-center">
                 {testimonials[currentIndex].text}
               </p>
