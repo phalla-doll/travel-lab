@@ -49,8 +49,8 @@ export const Navbar = () => {
   }, { scope: navRef });
 
   return (
-    <nav ref={navRef} className="fixed top-0 left-0 right-0 flex items-center justify-between py-6 px-4 md:px-8 w-full z-50 transition-colors duration-500 bg-transparent [&.scrolled]:bg-white/95 [&.scrolled]:backdrop-blur-md [&.scrolled]:py-4 [&.scrolled]:shadow-sm">
-      <div className="text-xl font-heading font-bold tracking-widest uppercase shrink-0">Travel Lab &reg;</div>
+    <nav ref={navRef} className="fixed top-0 left-0 right-0 flex items-center justify-between py-6 px-4 md:px-8 w-full z-50 transition-all duration-500 bg-transparent [&.scrolled]:bg-white/95 [&.scrolled]:backdrop-blur-md [&.scrolled]:py-3 [&.scrolled]:shadow-sm group">
+      <div className="text-xl md:text-2xl font-heading font-bold tracking-widest uppercase shrink-0 transition-all duration-500 group-[.scrolled]:text-lg md:group-[.scrolled]:text-xl">Travel Lab &reg;</div>
       
       <div ref={containerRef} className="nav-container hidden md:grid grid-cols-2 grid-rows-4 grid-flow-col gap-x-16 gap-y-2 text-[12px] font-bold uppercase tracking-widest [&.scrolled-layout]:flex [&.scrolled-layout]:gap-x-6 [&.scrolled-layout]:items-center">
         {links.map((link, i) => (
