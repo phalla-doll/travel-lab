@@ -35,14 +35,14 @@ const HeroSection = () => {
               Discover Cambodia
             </h1>
             
-            <div className="w-full flex flex-col md:flex-row justify-between items-end gap-8 mb-12 md:mb-0">
-              <div className="w-full md:w-[30%] text-xs font-medium leading-relaxed text-white">
+            <div className="w-full md:w-[75%] lg:w-[65%] flex flex-col md:flex-row justify-between items-end gap-8 mb-20 md:mb-4">
+              <div className="w-full md:w-[45%] text-xs font-medium leading-relaxed text-white">
                 Travel with confidence with TRAVEL LAB - your trusted guide to breathtaking destinations, thrilling adventures, and unforgettable memories in the Kingdom of Wonder.
                 <br/><br/>
                 From ancient temples to sun-kissed beaches, we help you explore Cambodia like never before.
               </div>
               
-              <div className="w-full md:w-[30%] text-xs font-medium leading-relaxed text-white">
+              <div className="w-full md:w-[45%] text-xs font-medium leading-relaxed text-white">
                  Explore ancient temples, pristine beaches, and vibrant culture - we&apos;ll take care of the rest.
                  <br/><br/>
                  Our dedicated team of travel experts and local guides ensures every detail is tailored to your needs, whether you&apos;re planning a solo getaway or a family vacation.
@@ -50,10 +50,14 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Black Button */}
-          <div className="absolute bottom-0 right-0 md:right-[10%] bg-[#1a1a1a] text-white rounded-tl-3xl md:rounded-t-3xl md:rounded-b-none px-8 py-5 flex items-center gap-4 cursor-pointer hover:bg-black hover:scale-105 origin-bottom transition-all duration-300 z-20 group">
-            <span className="text-sm font-medium">Select a tour</span>
-            <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
+          {/* Creative Select Tour Button */}
+          <div className="absolute bottom-6 md:bottom-8 right-4 md:right-8 z-20">
+            <button className="group flex items-center gap-6 bg-[#d4e5f4] text-black pl-8 pr-2 py-2 rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:bg-white shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
+              <span className="text-sm font-bold uppercase tracking-wider">Select a tour</span>
+              <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#e11d48] transition-colors duration-500">
+                <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-500" />
+              </div>
+            </button>
           </div>
         </div>
         
