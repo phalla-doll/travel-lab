@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
+import { ServicesSection } from "@/components/ServicesSection";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -397,58 +398,6 @@ const DestinationsSection = () => {
           <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
             <ChevronRight className="w-5 h-5" />
           </button>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-const ServicesSection = () => {
-  return (
-    <section className="bg-[#f9d1d9] min-h-screen flex flex-col p-4 md:p-8">
-      
-      <div className="flex-1 flex flex-col lg:flex-row px-4 md:px-8 pt-12 gap-8 lg:gap-16">
-        <div className="w-full lg:w-[45%] xl:w-[40%] flex flex-col shrink-0">
-          <h2 className="section-title text-[12vw] sm:text-[10vw] lg:text-[7vw] xl:text-[8vw] leading-[0.85] font-heading font-black uppercase mb-8">
-            OUR SERVICES
-          </h2>
-          <p className="text-sm font-medium mb-12 max-w-md opacity-80 leading-relaxed">
-            From the moment you arrive in Phnom Penh or Siem Reap, we offer reliable services designed to make your Cambodian journey smooth, safe, and unforgettable.
-          </p>
-          <button className="bg-[#1a1a1a] text-white rounded-full px-8 py-4 flex items-center justify-center gap-4 w-fit hover:bg-black transition-colors">
-            <span className="text-sm font-medium">View all services</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-        
-        <div className="w-full lg:w-[55%] xl:w-[60%] flex flex-col">
-          {/* Service 1 */}
-          <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
-            <div className="w-3/4">
-              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 group-hover:text-[#e11d48] transition-colors">AIRPORT<br/>PICKUP</h3>
-              <p className="text-xs font-medium opacity-80 max-w-xs">We provide pickup and transfer from the airport to your hotel</p>
-            </div>
-            <ArrowUpRight className="w-8 h-8 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-          </div>
-          
-          {/* Service 2 */}
-          <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
-            <div className="w-3/4">
-              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 text-[#e11d48]">TUK-TUK &<br/>SCOOTER</h3>
-              <div className="card-image-container parallax-card relative w-full h-[200px] rounded-2xl overflow-hidden mt-6">
-                <Image src="https://picsum.photos/seed/tuktuk-ride/800/400" alt="Tuk-tuk rental" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
-              </div>
-            </div>
-            <ArrowUpRight className="w-8 h-8 text-[#e11d48] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-          </div>
-          
-          {/* Service 3 (partial) */}
-          <div className="border-t border-black/20 py-8 flex justify-between items-start group cursor-pointer">
-            <div className="w-3/4">
-              <h3 className="text-4xl md:text-5xl font-heading font-bold uppercase mb-4 group-hover:text-[#e11d48] transition-colors">LOCAL<br/>GUIDES</h3>
-            </div>
-            <ArrowUpRight className="w-8 h-8 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-          </div>
         </div>
       </div>
     </section>
