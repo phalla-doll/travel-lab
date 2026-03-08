@@ -7,6 +7,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { ServicesSection } from "@/components/ServicesSection";
+import { PricingSection } from "@/components/PricingSection";
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -503,6 +504,7 @@ export default function Home() {
       <ToursSection />
       <DestinationsSection />
       <ServicesSection />
+      <PricingSection />
       <TestimonialsSection />
       <FAQSection />
       <Footer />
