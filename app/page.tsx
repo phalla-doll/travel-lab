@@ -8,7 +8,7 @@ import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { ServicesSection } from "@/components/ServicesSection";
 import { PricingSection } from "@/components/PricingSection";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -81,15 +81,58 @@ const HeroSection = () => {
   )
 }
 
+const toursData = [
+  {
+    id: "01",
+    title: "Solo Travelers",
+    image: "/solo-pexels-arina-krasnikova-7350872.jpg",
+    description: "Embark on a journey of self-discovery. Our solo tours offer the perfect balance of guided exploration and personal freedom, ensuring safety while you connect with like-minded adventurers."
+  },
+  {
+    id: "02",
+    title: "Group Tours",
+    image: "/friend-group-pexels-kindelmedia-7149130.jpg",
+    description: "Create unforgettable memories with your best friends. Whether it's exploring ancient ruins, a beach getaway, or a cultural escape - our group-friendly tours are designed for fun, bonding, and shared experiences."
+  },
+  {
+    id: "03",
+    title: "Family Escapes",
+    image: "/family-pexels-vika-glitter-392079-1620653.jpg",
+    description: "Enjoy stress-free family vacations with activities tailored for all ages. From interactive temple tours to relaxing beach days, we handle the logistics so you can focus on making memories."
+  }
+];
+
 const ToursSection = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scrollToCard = (index: number) => {
     if (scrollRef.current) {
-      const { current } = scrollRef;
-      const scrollAmount = direction === 'left' ? -400 : 400;
-      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      const container = scrollRef.current;
+      const cards = container.querySelectorAll('.tour-card-wrapper');
+      if (cards[index]) {
+        const card = cards[index] as HTMLElement;
+        const scrollLeft = card.offsetLeft - container.offsetLeft - (container.clientWidth / 2) + (card.clientWidth / 2);
+        container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      }
     }
+  };
+
+  const next = () => {
+    const newIndex = (activeIndex + 1) % toursData.length;
+    setActiveIndex(newIndex);
+    scrollToCard(newIndex);
+  };
+
+  const prev = () => {
+    const newIndex = (activeIndex - 1 + toursData.length) % toursData.length;
+    setActiveIndex(newIndex);
+    scrollToCard(newIndex);
+  };
+
+  const handleCardClick = (index: number) => {
+    setActiveIndex(index);
+    scrollToCard(index);
   };
 
   return (
@@ -107,47 +150,49 @@ const ToursSection = () => {
         </div>
         
         <div ref={scrollRef} className="flex gap-8 overflow-x-auto py-16 px-4 md:px-8 -mx-4 md:-mx-8 snap-x scrollbar-hide">
-          {/* Card 1 */}
-          <div className="parallax-card min-w-[85vw] md:min-w-[400px] snap-start group cursor-pointer">
-            <div className="text-4xl font-heading font-bold mb-4">01</div>
-            <div className="card-image-container relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
-              <Image src="/solo-pexels-arina-krasnikova-7350872.jpg" alt="Solo Travelers" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
-            </div>
-            <h3 className="text-3xl font-heading font-bold uppercase">Solo Travelers</h3>
-          </div>
-          
-          {/* Card 2 (Active) */}
-          <div className="parallax-card min-w-[85vw] md:min-w-[400px] snap-start bg-[#fcd34d] p-6 rounded-2xl flex flex-col cursor-pointer hover:shadow-xl transition-all duration-300 group">
-            <div className="text-4xl font-heading font-bold mb-4">02</div>
-            <div className="card-image-container relative h-[250px] w-full rounded-2xl overflow-hidden mb-4">
-              <Image src="/friend-group-pexels-kindelmedia-7149130.jpg" alt="Group Tours" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold rotate-[-10deg] shadow-sm group-hover:scale-110 group-hover:rotate-[-5deg] transition-all duration-300">LIKE</div>
-            </div>
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-3xl font-heading font-bold uppercase">Group Tours</h3>
-              <ArrowUpRight className="w-6 h-6 transform group-hover:scale-125 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
-            </div>
-            <p className="text-xs font-medium leading-relaxed opacity-90">
-              Create unforgettable memories with your best friends. Whether it&apos;s exploring ancient ruins, a beach getaway, or a cultural escape - our group-friendly tours are designed for fun, bonding, and shared experiences.
-            </p>
-          </div>
-          
-          {/* Card 3 */}
-          <div className="parallax-card min-w-[85vw] md:min-w-[400px] snap-start group cursor-pointer">
-            <div className="text-4xl font-heading font-bold mb-4">03</div>
-            <div className="card-image-container relative h-[300px] w-full rounded-2xl overflow-hidden mb-4 grayscale group-hover:grayscale-0 transition-all duration-500">
-              <Image src="/family-pexels-vika-glitter-392079-1620653.jpg" alt="Family Escapes" fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
-            </div>
-            <h3 className="text-3xl font-heading font-bold uppercase">Family Escapes</h3>
-          </div>
+          {toursData.map((tour, index) => {
+            const isActive = activeIndex === index;
+            return (
+              <div 
+                key={tour.id}
+                onClick={() => handleCardClick(index)}
+                className={`tour-card-wrapper parallax-card min-w-[85vw] md:min-w-[400px] snap-start transition-all duration-500 cursor-pointer group ${
+                  isActive ? 'bg-[#fcd34d] p-6 rounded-2xl flex flex-col hover:shadow-xl' : ''
+                }`}
+              >
+                <div className="text-4xl font-heading font-bold mb-4">{tour.id}</div>
+                <div className={`card-image-container relative w-full rounded-2xl overflow-hidden mb-4 transition-all duration-500 ${
+                  isActive ? 'h-[250px]' : 'h-[300px] grayscale group-hover:grayscale-0'
+                }`}>
+                  <Image src={tour.image} alt={tour.title} fill className="object-cover scale-110 group-hover:scale-125 transition-transform duration-700" />
+                  {isActive && (
+                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold rotate-[-10deg] shadow-sm group-hover:scale-110 group-hover:rotate-[-5deg] transition-all duration-300">LIKE</div>
+                  )}
+                </div>
+                
+                {isActive ? (
+                  <>
+                    <div className="flex justify-between items-center mb-4">
+                      <h3 className="text-3xl font-heading font-bold uppercase">{tour.title}</h3>
+                      <ArrowUpRight className="w-6 h-6 transform group-hover:scale-125 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                    </div>
+                    <p className="text-xs font-medium leading-relaxed opacity-90">
+                      {tour.description}
+                    </p>
+                  </>
+                ) : (
+                  <h3 className="text-3xl font-heading font-bold uppercase">{tour.title}</h3>
+                )}
+              </div>
+            );
+          })}
         </div>
         
         <div className="flex items-center gap-4 mt-8">
-          <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+          <button onClick={prev} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <span className="text-sm font-bold">1 / 3</span>
-          <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+          <button onClick={next} className="w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
